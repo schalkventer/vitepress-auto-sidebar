@@ -142,8 +142,7 @@ const buildSidebarFromFiles = (
   return result.items || [];
 };
 
-export const createAutoSidebarConfig = (options: {
-  root?: string;
+export const createDynamicSidebarConfig = (options: {
   src?: string;
   dist?: string;
   ignore?: string[];
@@ -153,8 +152,8 @@ export const createAutoSidebarConfig = (options: {
   sidebar: DefaultTheme.SidebarItem[];
   allow: string[];
 } => {
-  const { root = ".", src = "src", dist = "dist", ignore = [] } = options || {};
-  const ROOT_PATH = resolveRootPath(root);
+  const { src = "src", dist = "dist", ignore = [] } = options || {};
+  const ROOT_PATH = resolveRootPath("../..");
 
   const SRC_PATH = resolve(ROOT_PATH, src);
   const files = getAllMarkdownFilesWithTitle(SRC_PATH, ignore);
