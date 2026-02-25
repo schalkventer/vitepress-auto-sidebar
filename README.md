@@ -35,21 +35,21 @@ export default defineConfig(
 ## Structure
 
 ```
-/
-  package.json
-  .vitepress
-    config.js
-  src
-    main.js
-    index.md
-      example-a
-        index.ts
-        example-a.md
-        example-a.js
-      example-b
-        index.ts
-        example-b.md
-        example-b.js
+.
+├── package.json
+├── .vitepress/
+│   └── config.js
+└── src/
+    ├── main.js
+    └── index.md/
+        ├── example-a/
+        │   ├── index.ts
+        │   ├── example-a.md
+        │   └── example-a.js
+        └── example-b/
+            ├── index.ts
+            ├── example-b.md
+            └── example-b.js
 ```
 
 ## Files
